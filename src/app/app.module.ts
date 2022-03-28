@@ -7,12 +7,16 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { ByocToolbarComponent } from './byoc-toolbar/byoc-toolbar.component';
+import { ByocSearchBarComponent } from './byoc-search-bar/byoc-search-bar.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ByocToolbarComponent
+    ByocToolbarComponent,
+    ByocSearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,8 @@ import { ByocToolbarComponent } from './byoc-toolbar/byoc-toolbar.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

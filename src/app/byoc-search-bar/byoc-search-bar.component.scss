@@ -1,0 +1,14 @@
+.byoc-search-bar {
+  &__form {
+    width: 80%;
+  }
+
+  &__icon {
+    margin-right: 16px;
+  }
+
+  &__textarea {
+    height: 20px;
+    resize: none;
+  }
+}
