@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ByocHomeComponent } from './home/byoc-home.component';
+import { ByocHomeComponent } from './byoc-home/byoc-home.component';
 
 const routes: Routes = [
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
