@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { ByocHomeComponent } from './byoc-home/byoc-home.component';
+import { ByocSubsectionComponent } from './byoc-subsection/byoc-subsection.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ByocHomeComponent } from './byoc-home/byoc-home.component';
     ByocToolbarComponent,
     ByocSearchBarComponent,
     ByocHomeComponent,
+    ByocSubsectionComponent,
   ],
   imports: [
     BrowserModule,
