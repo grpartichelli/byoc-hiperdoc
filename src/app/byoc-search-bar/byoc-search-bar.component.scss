@@ -1,5 +1,8 @@
 .byoc-search-bar {
   &__form {
+    @media (max-width: 1400px) {
+      width: 600px;
+    }
     width: 1300px;
   }
 
