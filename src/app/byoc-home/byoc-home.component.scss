@@ -49,6 +49,10 @@
       mat-card-title {
         font-size: 32px;
         font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       mat-card-subtitle {

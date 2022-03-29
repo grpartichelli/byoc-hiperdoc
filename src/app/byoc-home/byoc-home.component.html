@@ -9,7 +9,7 @@
     <div class="home__sections-container__section">
 
 
-      <mat-card class="home__sections-container__card">
+      <mat-card class="home__sections-container__card" [routerLink]="'/section/1/subsection/1'">
         <mat-card-title-group>
           <mat-card-title>1. Choosing Parts</mat-card-title>
           <mat-card-subtitle> Function and compatability</mat-card-subtitle>
@@ -17,23 +17,23 @@
         </mat-card-title-group>
         <mat-card-content>
           <ul class="home__sections-container__list">
-            <li>Case</li>
-            <li>Motherboard</li>
-            <li>CPU</li>
-            <li>RAM Memory</li>
-            <li>Cooler</li>
+            <li [routerLink]="'/section/1/subsection/1'">Case</li>
+            <li [routerLink]="'/section/1/subsection/2'">Motherboard</li>
+            <li [routerLink]="'/section/1/subsection/3'">CPU</li>
+            <li [routerLink]="'/section/1/subsection/4'">RAM Memory</li>
+            <li [routerLink]="'/section/1/subsection/5'">Cooler</li>
           </ul>
           <ul class="home__sections-container__list">
-            <li>HD e SSD</li>
-            <li>Power Supply</li>
-            <li>Graphics Card</li>
-            <li>Peripherals</li>
-            <li>Monitor</li>
+            <li [routerLink]="'/section/1/subsection/6'">HD e SSD</li>
+            <li [routerLink]="'/section/1/subsection/7'">Power Supply</li>
+            <li [routerLink]="'/section/1/subsection/8'">Graphics Card</li>
+            <li [routerLink]="'/section/1/subsection/9'">Peripherals</li>
+            <li [routerLink]="'/section/1/subsection/10'">Monitor</li>
           </ul>
         </mat-card-content>
       </mat-card>
 
-      <mat-card class="home__sections-container__card">
+      <mat-card class="home__sections-container__card" [routerLink]="'/section/2/subsection/1'">
         <mat-card-title-group>
           <mat-card-title>2. Buying Parts</mat-card-title>
           <mat-card-subtitle>Pricing and tips </mat-card-subtitle>
@@ -41,9 +41,9 @@
         </mat-card-title-group>
         <mat-card-content>
           <ul class="home__sections-container__list">
-            <li>Prices</li>
-            <li>Stores</li>
-            <li>Tips</li>
+            <li [routerLink]="'/section/2/subsection/1'">Prices</li>
+            <li [routerLink]="'/section/2/subsection/2'">Stores</li>
+            <li [routerLink]="'/section/2/subsection/3'">Tips</li>
           </ul>
         </mat-card-content>
       </mat-card>
@@ -51,7 +51,7 @@
 
     <div class="home__sections-container__section">
 
-      <mat-card class="home__sections-container__card">
+      <mat-card class="home__sections-container__card" [routerLink]="'/section/3/subsection/1'">
         <mat-card-title-group>
           <mat-card-title>3. Building </mat-card-title>
           <mat-card-subtitle>Installation and construction</mat-card-subtitle>
@@ -59,20 +59,20 @@
         </mat-card-title-group>
         <mat-card-content>
           <ul class="home__sections-container__list">
-            <li>Motherboard</li>
-            <li>CPU</li>
-            <li>RAM Memory</li>
-            <li>Cooler</li>
-            <li>Power Supply</li>
+            <li [routerLink]="'/section/3/subsection/1'">Motherboard</li>
+            <li [routerLink]="'/section/3/subsection/2'">CPU</li>
+            <li [routerLink]="'/section/3/subsection/3'">RAM Memory</li>
+            <li [routerLink]="'/section/3/subsection/4'">Cooler</li>
+            <li [routerLink]="'/section/3/subsection/5'">Power Supply</li>
           </ul>
           <ul class="home__sections-container__list">
-            <li>HD and SSD</li>
-            <li>Graphics Card</li>
+            <li [routerLink]="'/section/3/subsection/6'">HD and SSD</li>
+            <li [routerLink]="'/section/3/subsection/7'">Graphics Card</li>
           </ul>
         </mat-card-content>
       </mat-card>
 
-      <mat-card class="home__sections-container__card">
+      <mat-card class="home__sections-container__card" [routerLink]="'/section/4/subsection/1'">
         <mat-card-title-group>
           <mat-card-title>4. Post Built</mat-card-title>
           <mat-card-subtitle>Software, operational systems and drivers.</mat-card-subtitle>
@@ -80,9 +80,9 @@
         </mat-card-title-group>
         <mat-card-content>
           <ul class="home__sections-container__list">
-            <li>Windows</li>
-            <li>Linux</li>
-            <li>Drivers</li>
+            <li [routerLink]="'/section/4/subsection/1'">Windows</li>
+            <li [routerLink]="'/section/4/subsection/2'">Linux</li>
+            <li [routerLink]="'/section/4/subsection/3'">Drivers</li>
           </ul>
         </mat-card-content>
       </mat-card>
