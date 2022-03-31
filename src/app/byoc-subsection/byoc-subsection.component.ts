@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SubsectionService } from '../service/subsection.service';
+import { Service } from '../service/service';
 import { SubsectionModel } from '../model/subsection.model';
 
 @Component({
@@ -16,11 +16,12 @@ export class ByocSubsectionComponent implements OnInit {
     this.activatedRoute.snapshot.paramMap.get('subsection')
   );
   subsection: SubsectionModel = new SubsectionModel('', [], [], [], []);
+  section: string = '';
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
-    private readonly subsectionService: SubsectionService
+    private readonly service: Service
   ) {}
 
   ngOnInit() {
@@ -31,7 +32,9 @@ export class ByocSubsectionComponent implements OnInit {
     if (!this.sectionNumber || !this.subsectionNumber) {
       this.router.navigate(['/home']).then();
     }
-    this.subsection = this.subsectionService.find(
+    this.section = this.service.findSection(this.sectionNumber);
+
+    this.subsection = this.service.findSubsection(
       this.sectionNumber,
       this.subsectionNumber
     );
