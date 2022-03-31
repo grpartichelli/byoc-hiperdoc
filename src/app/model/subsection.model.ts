@@ -1,4 +1,5 @@
 export class SubsectionModel {
+  name: string;
   paragraphs: Array<string>;
   images: Array<string>;
   videos: Array<string>;
@@ -7,6 +8,7 @@ export class SubsectionModel {
   isLastSection: boolean = false;
 
   constructor(
+    name: string,
     paragraphs: Array<string>,
     images: Array<string>,
     videos: Array<string>,
@@ -14,6 +16,7 @@ export class SubsectionModel {
     isLastSubsection?: boolean,
     isLastSection?: boolean
   ) {
+    this.name = name;
     this.paragraphs = paragraphs;
     this.images = images;
     this.videos = videos;

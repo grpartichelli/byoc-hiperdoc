@@ -15,7 +15,7 @@ export class ByocSubsectionComponent implements OnInit {
   readonly subsectionNumber: number = Number(
     this.activatedRoute.snapshot.paramMap.get('subsection')
   );
-  subsection: SubsectionModel = new SubsectionModel([], [], [], []);
+  subsection: SubsectionModel = new SubsectionModel('', [], [], [], []);
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,
