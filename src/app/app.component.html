@@ -1,7 +1,7 @@
 <byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
 
 <mat-drawer-container class="content">
-  <byoc-sidebar [isSidebarOpen]="isSidebarOpen"></byoc-sidebar>
+  <mat-drawer mode="side" [opened]="isSidebarOpen">Drawer content</mat-drawer>
   <router-outlet></router-outlet>
 </mat-drawer-container>
 
