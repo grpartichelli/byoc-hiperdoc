@@ -1,4 +1,7 @@
-<byoc-toolbar></byoc-toolbar>
-<router-outlet></router-outlet>
+<byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
 
+<mat-drawer-container class="content">
+  <byoc-sidebar [isSidebarOpen]="isSidebarOpen"></byoc-sidebar>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
 
