@@ -20,10 +20,26 @@
   }
 }
 
-.guided-experience-button {
+.guided-experience-list-item {
   background-color: rgb(255, 64, 129, 1);
 
   &:hover {
     background-color: rgb(255, 64, 129, 0.9);
+  }
+}
+
+.guided-experience-float-button {
+  position: absolute;
+  z-index: 10;
+  top: 82%;
+  right: 6%;
+  height: 102px !important;
+  width: 102px !important;
+  font-size: 102px !important;
+
+  &__icon {
+    height: 42px !important;
+    width: 42px !important;
+    font-size: 42px !important;
   }
 }
