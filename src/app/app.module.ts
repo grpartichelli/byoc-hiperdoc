@@ -15,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ByocHomeComponent } from './byoc-home/byoc-home.component';
 import { ByocSubsectionComponent } from './byoc-subsection/byoc-subsection.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { ByocSidebarComponent } from './byoc-sidebar/byoc-sidebar.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,6 @@ import { ByocSidebarComponent } from './byoc-sidebar/byoc-sidebar.component';
     ByocSearchBarComponent,
     ByocHomeComponent,
     ByocSubsectionComponent,
-    ByocSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +37,8 @@ import { ByocSidebarComponent } from './byoc-sidebar/byoc-sidebar.component';
     MatCardModule,
     AppRoutingModule,
     MatSidenavModule,
+    MatDividerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

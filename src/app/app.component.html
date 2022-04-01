@@ -1,7 +1,13 @@
 <byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
 
 <mat-drawer-container class="content">
-  <mat-drawer mode="side" [opened]="isSidebarOpen">Drawer content</mat-drawer>
+  <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen">
+    <mat-nav-list *ngFor="let section of SECTION_DATA | keyvalue" style="padding: 0">
+      <mat-divider ></mat-divider>
+      <a mat-list-item routerLink="/section/{{section.key}}/subsection/1">{{section.key}}. {{section.value}}</a>
+    </mat-nav-list>
+    <mat-divider ></mat-divider>
+  </mat-drawer>
   <router-outlet></router-outlet>
 </mat-drawer-container>
 
