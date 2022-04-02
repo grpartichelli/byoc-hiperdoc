@@ -76,8 +76,76 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       ]
     ),
   ],
-  ['1,3', new SubsectionModel('CPU', [], [], [], [])],
-  ['1,4', new SubsectionModel('Memory', [], [], [], [])],
+  [
+    '1,3',
+    new SubsectionModel(
+      'CPU',
+      [
+        new ParagraphModel(
+          'The CPU',
+          'The CPU is the core component that defines a computing device, and while it is of critical importance, the CPU can only function alongside other hardware. The silicon chip sits in a special socket located on the main circuit board (motherboard or mainboard) inside the device. It is separate from the memory, which is where information is temporarily stored. It is also separate from the graphics card or graphics chip, which renders the video and 3D graphics that are displayed on your screen.',
+          'https://miro.medium.com/max/300/1*bhf2tYvLEXyzg0M_3MBhuQ.png'
+        ),
+        new ParagraphModel(
+          'Core Count',
+          'Modern gaming CPUs have multiple cores. Each one of these cores acts like an additional processor, which allows the CPU to process multiple instructions simultaneously.\n' +
+            '\n' +
+            'Many PC games make use of multiple cores, but higher core count becomes increasingly important when undertaking CPU-intensive tasks outside of gaming, like encoding video or using complex programs for high-level content creation.\n' +
+            '\n' +
+            'If you’re using your CPU for more than just gaming — for example, streaming gameplay while playing — additional cores can make a difference. A CPU with a higher core count can handle workloads that a single-core CPU, even one with a very high clock speed, might struggle with.'
+        ),
+        new ParagraphModel(
+          'Socket Compatibility',
+          'Socket compatibility is a primary concern when it comes to buying a processor. The socket compatibility enables the interface between a motherboard and its CPU. If a motherboard has already been acquired, make sure that the processor installed is compatible with the motherboard’s socket. Alternately, when building a computer around the processor, make sure that the motherboard is compatible with the existing processor.',
+          'https://pngimg.com/uploads/cpu/cpu_PNG53.png'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/bcVBqwlnmlM'],
+      [
+        'https://www.digitaltrends.com/computing/what-is-a-cpu/',
+        'https://www.intel.com/content/www/us/en/gaming/resources/gaming-cpu.html',
+        'https://www.newegg.com/insider/how-to-choose-a-cpu/',
+      ]
+    ),
+  ],
+  [
+    '1,4',
+    new SubsectionModel(
+      'Memory',
+      [
+        new ParagraphModel(
+          'The RAM Memory',
+          'RAM is essentially a device’s short-term memory. It temporarily stores (remembers) everything currently running on a device, like all OS-specific services and any web browser, image editor, or game you’re playing.\n' +
+            '\n' +
+            'RAM prevents the CPU from digging through the device’s slower storage — like a hard drive or even a solid-state drive (SSD) — every time you request a new browser tab or load a new enemy to shoot. As fast as storage is compared to drives of years gone by, they’re still far slower than RAM.\n' +
+            '\n' +
+            'Data that resides in RAM is readable from any capable component at almost the same speed. Because it has a hard-wired connection to the device, there’s no real latency in cabling or connection.',
+          'https://images.tcdn.com.br/img/img_prod/785242/memoria_ram_win_memory_ddr4_2666mhz_4gb_desktop_cl19_udimm_wh5sd4g6c4uaz_7155_1_ed86ab2c1718d84f9b5bf5e44b57441e.png'
+        ),
+        new ParagraphModel(
+          'Motherboard Compatibility and RAM Types',
+          'Depending on the age and purchase price of your computer, it was designed to use one of the following types of memory technology:\n' +
+            '\n' +
+            'SDR (single data rate) technology primarily appeared in systems manufactured before 2002\n' +
+            'DDR2 (second generation double data rate) technology began to appear mid-2004\n' +
+            'DDR3 technology began to appear in late 2007\n' +
+            'DDR4 technology began to appear in 2014\n' +
+            ' \n' +
+            '\n' +
+            "As a general rule, each generation of DDR technology is faster, runs on lower voltage, and boasts lower latencies than previous-generation technology. However, if your system was designed for DDR2 technology, it won't be able to support DDR3 modules. Since each type of memory has different notch locations (which are important for installation), different memory technologies aren't compatible with each other. Motherboards are generally only able to support one type of memory technology.\n" +
+            '\n',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Desktop_DDR_Memory_Comparison.svg/1200px-Desktop_DDR_Memory_Comparison.svg.png'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/mkpCvaBBo-c'],
+      [
+        'https://www.digitaltrends.com/computing/what-is-ram/',
+        'https://www.crucial.com/support/memory-motherboard-compatibility',
+      ]
+    ),
+  ],
   ['1,5', new SubsectionModel('Cooler', [], [], [], [])],
   ['1,6', new SubsectionModel('HD and SSD', [], [], [], [])],
   ['1,7', new SubsectionModel('PSU', [], [], [], [])],

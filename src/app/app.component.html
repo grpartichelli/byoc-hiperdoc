@@ -1,6 +1,6 @@
 <byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
 
-<mat-drawer-container class="content">
+<mat-drawer-container class="content" >
   <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen">
     <mat-nav-list style="padding: 0">
     <mat-divider ></mat-divider>
@@ -13,7 +13,7 @@
     </mat-nav-list>
     <mat-divider ></mat-divider>
   </mat-drawer>
-  <router-outlet></router-outlet>
+  <router-outlet ></router-outlet>
 </mat-drawer-container>
 
 <button class="guided-experience-float-button" mat-fab color="accent" >
