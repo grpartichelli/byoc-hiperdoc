@@ -30,4 +30,22 @@
       font-size: 18px;
     }
   }
+  &__navigation {
+    margin: auto;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+      font-size: 36px;
+      cursor: pointer;
+      &__home {
+        font-size: 32px;
+      }
+      &__disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+    }
+  }
 }

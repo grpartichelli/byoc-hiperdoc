@@ -6,7 +6,7 @@ import { SectionData } from '../data/section.data';
 @Injectable({
   providedIn: 'root',
 })
-export class Service {
+export class DataService {
   readonly SUBSECTION_DATA = SubsectionData;
   readonly SECTION_DATA = SectionData;
 

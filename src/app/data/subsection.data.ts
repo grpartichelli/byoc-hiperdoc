@@ -38,7 +38,11 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       [
         'https://www.howtogeek.com/719270/how-to-choose-a-pc-case-5-features-to-consider/',
         'https://www.xda-developers.com/how-to-pick-pc-case/',
-      ]
+      ],
+      false,
+      false,
+      true,
+      false
     ),
   ],
   ['1,2', new SubsectionModel('Motherboard', [], [], [], [])],
@@ -49,22 +53,64 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
   ['1,7', new SubsectionModel('PSU', [], [], [], [])],
   ['1,8', new SubsectionModel('Graphics Card', [], [], [], [])],
   ['1,9', new SubsectionModel('Peripherals', [], [], [], [])],
-  ['1,10', new SubsectionModel('Monitor', [], [], [], [])],
+  ['1,10', new SubsectionModel('Monitor', [], [], [], [], true)],
 
-  ['2,1', new SubsectionModel('Prices', [], [], [], [])],
+  [
+    '2,1',
+    new SubsectionModel(
+      'Prices',
+      [],
+      [],
+      [],
+      [],
+      false,
+      false,
+      false,
+      true,
+      10
+    ),
+  ],
   ['2,2', new SubsectionModel('Stores', [], [], [], [])],
-  ['2,3', new SubsectionModel('Tips', [], [], [], [])],
+  ['2,3', new SubsectionModel('Tips', [], [], [], [], true)],
 
-  ['3,1', new SubsectionModel('Motherboard', [], [], [], [])],
+  [
+    '3,1',
+    new SubsectionModel(
+      'Motherboard',
+      [],
+      [],
+      [],
+      [],
+      false,
+      false,
+      false,
+      true,
+      3
+    ),
+  ],
   ['3,2', new SubsectionModel('CPU', [], [], [], [])],
   ['3,3', new SubsectionModel('RAM', [], [], [], [])],
   ['3,4', new SubsectionModel('Memory', [], [], [], [])],
   ['3,5', new SubsectionModel('Cooler', [], [], [], [])],
   ['3,6', new SubsectionModel('PSU', [], [], [], [])],
   ['3,7', new SubsectionModel('HD and SSD', [], [], [], [])],
-  ['3,8', new SubsectionModel('Graphics Card', [], [], [], [])],
+  ['3,8', new SubsectionModel('Graphics Card', [], [], [], [], true)],
 
-  ['4,1', new SubsectionModel('Windows', [], [], [], [])],
+  [
+    '4,1',
+    new SubsectionModel(
+      'Windows',
+      [],
+      [],
+      [],
+      [],
+      false,
+      false,
+      false,
+      true,
+      8
+    ),
+  ],
   ['4,2', new SubsectionModel('Linux', [], [], [], [])],
-  ['4,3', new SubsectionModel('Drivers', [], [], [], [])],
+  ['4,3', new SubsectionModel('Drivers', [], [], [], [], false, true)],
 ]);

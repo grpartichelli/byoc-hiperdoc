@@ -8,6 +8,9 @@ export class SubsectionModel {
   references: Array<string>;
   isLastSubsection: boolean = false;
   isLastSection: boolean = false;
+  isFirstSection: boolean = false;
+  isFirstSubsection: boolean = false;
+  previousSubsection: number = 1;
 
   constructor(
     name: string,
@@ -16,7 +19,10 @@ export class SubsectionModel {
     videos: Array<string>,
     references: Array<string>,
     isLastSubsection?: boolean,
-    isLastSection?: boolean
+    isLastSection?: boolean,
+    isFirstSection?: boolean,
+    isFirstSubsection?: boolean,
+    previousSubsection?: number
   ) {
     this.name = name;
     this.paragraphs = paragraphs;
@@ -25,5 +31,10 @@ export class SubsectionModel {
     this.references = references;
     this.isLastSubsection = !!isLastSubsection;
     this.isLastSection = !!isLastSection;
+    this.isFirstSection = !!isFirstSection;
+    this.isFirstSubsection = !!isFirstSubsection;
+    if (previousSubsection) {
+      this.previousSubsection = previousSubsection;
+    }
   }
 }
