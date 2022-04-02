@@ -1,2 +1,23 @@
-<h1>{{sectionNumber}}.{{section}} </h1>
-<h3>{{subsectionNumber}}.{{subsection.name}}</h3>
+<div class="subsection">
+ <h1  class="subsection__title"> {{subsectionNumber}}. {{subsection.name}}: {{section}}</h1>
+
+
+  <div class="subsection__paragraph"*ngFor="let paragraph of subsection.paragraphs">
+    <h2>{{paragraph.title}}</h2>
+    <p>{{paragraph.text}}</p>
+    <img *ngIf="paragraph.image" src="{{paragraph.image}}">
+  </div>
+
+  <div class="subsection__footer">
+    <h2>Recommended Videos</h2>
+    <iframe *ngFor="let video of subsection.videos" title="video"  width="550" height="350" [src]="video | safe"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2>References</h2>
+    <ul>
+      <li *ngFor="let reference of subsection.references"><a [href]="reference">{{reference}}</a></li>
+    </ul>
+
+  </div>
+
+
+</div>
+

@@ -1,0 +1,33 @@
+.subsection {
+  padding: 24px 10% 48px 5%;
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+    display: block;
+    margin: 24px auto auto auto;
+  }
+
+  &__paragraph {
+    p {
+      font-size: 18px;
+    }
+    img {
+      display: block;
+      margin: 24px auto 24px auto;
+      max-height: 300px;
+      max-width: 300px;
+    }
+  }
+
+  &__footer {
+    iframe {
+      display: block;
+      margin: auto;
+    }
+
+    li {
+      font-size: 18px;
+    }
+  }
+}

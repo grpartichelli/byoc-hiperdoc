@@ -17,6 +17,7 @@ import { ByocSubsectionComponent } from './byoc-subsection/byoc-subsection.compo
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatListModule } from '@angular/material/list';
     ByocSearchBarComponent,
     ByocHomeComponent,
     ByocSubsectionComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

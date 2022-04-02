@@ -1,6 +1,8 @@
+import { ParagraphModel } from './paragraph.model';
+
 export class SubsectionModel {
   name: string;
-  paragraphs: Array<string>;
+  paragraphs: Array<ParagraphModel>;
   images: Array<string>;
   videos: Array<string>;
   references: Array<string>;
@@ -9,7 +11,7 @@ export class SubsectionModel {
 
   constructor(
     name: string,
-    paragraphs: Array<string>,
+    paragraphs: Array<ParagraphModel>,
     images: Array<string>,
     videos: Array<string>,
     references: Array<string>,
