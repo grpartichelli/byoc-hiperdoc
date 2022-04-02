@@ -327,7 +327,8 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
         'https://www.techopedia.com/definition/2252/peripheral-device',
         'https://www.newegg.com/insider/how-to-choose-a-keyboard/',
         'https://www.newegg.com/insider/how-to-choose-a-mouse/',
-      ]
+      ],
+      true
     ),
   ],
 
@@ -441,10 +442,42 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
     '3,1',
     new SubsectionModel(
       'Motherboard',
+      [
+        new ParagraphModel(
+          'Installing IO Shield',
+          'To figure out the direction your IO shield should go, you need to know where it will sit on the motherboard. Once you know, start lining up the IO shield with the motherboard. You need to get it as close to perfect as possible. It may help to get a second set of hands to keep it steady. \n Now you can finally start to install the IO shield. First, place your CPU’s case horizontally and slide the IO shield into place.\n' +
+            '\n' +
+            'You will have to apply force to the corner of the IO shield, but don’t push too hard so as to not bend anything. Then, apply force to the opposite lower corner to get it to snap into place. You should hear a clicking sound if it goes in correctly.\n' +
+            '\n' +
+            'Remember that the bumps on the shield need to be above the metal brace of the case. If you don’t have them aligned there, you will never hear the clicking sound.',
+          'https://external-preview.redd.it/1871ebaPM1ODhs18Rv_zWu-Un5vVJUqkPcwDD6LkFTA.png?auto=webp&s=b0918a34527fe627a3683cd899903a960a905f47'
+        ),
+        new ParagraphModel(
+          'Installing The Motherboard',
+          'Once done, you need to hover the motherboard inside the case to figure out where the standoffs are located. Some PC cases will have pre-installed standoffs, but you may have to manually install them depending on your case.\n' +
+            'The placement of these standoffs will depend on the size of the board itself. It’s also important to make sure your PC case is compatible and is big enough to accommodate the motherboard of your choice.\n' +
+            'A motherboard standoff hole being highlighted \n' +
+            '\n' +
+            'After locating the standoffs, place your motherboard inside the case and align the standoffs properly.\n' +
+            'The next step is to screw the motherboard down. You’ll follow an ‘X’ pattern to do the screws, meaning you’ll work the screw that’s diagonally opposite to the one that you tightened first.\n' +
+            'Be wary of the amount of force applied while screwing down the board. The main idea is to secure the board inside the case, not overtighten them.\n' +
+            'You have successfully placed the motherboard inside the case now, but we still have a couple of things to do.\n' +
+            'Port to connect the ATX cable on the motherboard\n' +
+            '\n' +
+            'After that, you have to connect the main ATX power cable, and the CPU power leads. These two cables will make sure the board is able to supply power to the components.\n' +
+            'Almost all cables and the corresponding ports and leads are marked with their names, so you shouldn’t have any issues figuring out which cable goes where. If not, you’ll have to refer to the motherboard manual to find appropriate leads.',
+          'https://linustechtips.com/uploads/monthly_2018_08/39083428_312369319335287_3234019453725310976_n.jpg.eebefe49c967e8a07946d79e99b610c2.jpg'
+        ),
+      ],
       [],
-      [],
-      [],
-      [],
+      [
+        'https://www.youtube.com/embed/XAWNzd-gc3Q',
+        'https://www.youtube.com/embed/hrv7_gl4MAQ',
+      ],
+      [
+        'https://www.onecomputerguy.com/how-to-install-io-shield/',
+        'https://www.xda-developers.com/how-to-install-motherboard/',
+      ],
       false,
       false,
       false,
@@ -464,10 +497,23 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
     '4,1',
     new SubsectionModel(
       'Windows',
+      [
+        new ParagraphModel(
+          'Installtion - Bootable USB',
+          "Create USB installation media. Visit Microsoft's Windows 10 download page and select “Download tool now” under the “create Windows 10 installation media” section. Transfer the downloaded installer tool to a USB drive.\n" +
+            'Use your installation media. Insert your installation media into your device and then access the computer’s BIOS or UEFI. These are the systems that allow you to control your computer’s core hardware. \n' +
+            '\n' +
+            "The process of accessing these systems is unique to each device, but the manufacturer’s website should be able to give you a helping hand here. Generally, you'll need to press the F2, F12 or Delete keys as your computer boots up.",
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1024px-Windows_10_Logo.svg.png'
+        ),
+        new ParagraphModel(
+          'Installation - Boot Order',
+          'Once you have access to your computer’s BIOS/UEFI you’ll need to locate the settings for boot order. You need the Windows 10 installation tool to be higher up on the list than the device’s current current boot drive: this is the SSD or HDD that your existing OS is stored on. You should move the drive with the installer files to the very top of the boot order menu. Now, when you restart your device the Windows 10 installer should load up first. '
+        ),
+      ],
       [],
-      [],
-      [],
-      [],
+      ['https://www.youtube.com/embed/v_Z2OBf0yVs'],
+      ['https://www.tomsguide.com/how-to/how-to-install-windows-10'],
       false,
       false,
       false,
@@ -475,6 +521,76 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       8
     ),
   ],
-  ['4,2', new SubsectionModel('Linux', [], [], [], [])],
-  ['4,3', new SubsectionModel('Drivers', [], [], [], [], false, true)],
+  [
+    '4,2',
+    new SubsectionModel(
+      'Linux',
+      [
+        new ParagraphModel(
+          'Choosing a Distro',
+          'Choosing a Linux distribution is a personal thing. It greatly depends on what you want to do with it.\n' +
+            '\n' +
+            'Ubuntu and Linux Mint : Suitable for – Beginner to Advanced/Server\n' +
+            'Ubuntu is currently the most popular of the Linux Distributions. It is built on a Debian core, but has a more regular release cycle, is more polished, is easy to use and has major financial backing. It is a completely free distro, therefore copyrighted materials such as DVD playing software do not come as standard with Ubuntu, you must download and install it separately, but can be done easily. If you don’t like the look and feel of the latest Ubuntu desktop (called Unity), Linux Mint is based on Ubuntu, is made for beginners and still offers a GNOME or KDE version.\n' +
+            '\n' +
+            'Red Hat/CentOS/Fedora : Suitable for – Beginner to Advanced/Server\n' +
+            'Used to be very popular, easy to use, good installer. Has some annoying quirks, RPM software packaging can suffer from dependency problems, even with YUM system. RHEL (Red Hat Enterprise Linux) is the non-free Enterprise version offering of this distribution, it comes with full telephone based support and is backed by rigorous testing. CentOS is the free version which is derived from RHEL but usually trails behind it and of course does not come with enterprise support, then there is Fedora Core. Fedora is the bleeding-edge fork of Red Hat which has all the latest bells and whistles but as it is bleeding-edge, it can also suffer from less stability than their enterprise-grade counterparts.' +
+            '\n\nDebian : Suitable for – Intermediate to Advanced Users\n' +
+            'Very established Linux distro. DEB packages combined with apt-get system solve the tedium of the RPM software packaging in Redhat/Suse/Mandriva. Traditionally known for being further behind than some other distros, but rock solid. Is now the basis for many modern, easier to use distributions such as Ubuntu and Linux Mint',
+          'https://cdn.picpng.com/linux/linux-unix-tux-penguin-cute-43298.png'
+        ),
+        new ParagraphModel(
+          'Installation',
+          'With a bootable Ubuntu USB stick, you can:\n' +
+            '\n' +
+            'Install or upgrade Ubuntu\n' +
+            'Test out the Ubuntu desktop experience without touching your PC configuration\n' +
+            'Boot into Ubuntu on a borrowed machine or from an internet cafe\n' +
+            'Use tools installed by default on the USB stick to repair or fix a broken configuration\n' +
+            'This tutorial will show you how to create a bootable USB stick on Microsoft Windows using Rufus.\n' +
+            '\n' +
+            'For most users we recommend balenaEtcher instead of Rufus which is simpler to use and also available on MacOS and Ubuntu. Instructions are now included in the primary Install Ubuntu Desktop tutorial.\n' +
+            '\n' +
+            'Creating a bootable Ubuntu USB stick from Microsoft Windows is very simple and we’re going to cover the process in the next few steps.\n' +
+            '\n' +
+            'https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/_Ua-d9OeUOg'],
+      [
+        'https://www.geeksforgeeks.org/linux-distribution-shall-choose/',
+        'https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview',
+      ]
+    ),
+  ],
+  [
+    '4,3',
+    new SubsectionModel(
+      'Drivers',
+      [
+        new ParagraphModel(
+          'What are Drivers',
+          'To understand how drivers work, imagine trying to stream a Netflix show on your computer. When you play the video on your browser, the application sends your command request to your OS. \n' +
+            '\n' +
+            'Then, the OS must send out requests to other components of your computer that will help you execute commands so you can watch the show. The OS will ask the network card to buffer the video, send the correct commands to the graphics card to display the video, and communicate with the sound card to play the audio in the video. \n' +
+            '\n' +
+            'The OS sends all of these requests to the drivers associated with the required devices, and each device’s driver will know exactly what to do. So, for example, the network card driver knows what data to transfer, the video card will know what to display, and the sound card will know what sound to play. ',
+          'https://www.drivermax.es/wp-content/uploads/2015/11/drivermax_value1.png'
+        ),
+        new ParagraphModel(
+          'Installing Drivers',
+          'To download new drivers, go to PC manufacturer’s website or device manufacturer’s website. Driver updates are often available in the Support section of their website. If you are using a branded computer, it is recommended that you go to the PC manufacturer’s website to check for the latest driver first, as they may customize the driver. You are required to use the PC model and the operating system that you are using to download the correct driver. Usually, the PC model can be found on the machine. See How to Get Operating System. If you need to download the driver from device manufacturer, then you are required to know the device model.'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/RYYoCXh2gtw'],
+      [
+        "https://www.online-tech-tips.com/computer-tips/what-are-pc-drivers-and-why-do-you-need-them/#:~:text=As%20mentioned%20before%2C%20drivers%20are,hardware%20wouldn't%20work%20together.",
+        'https://www.drivereasy.com/knowledge/how-to-install-drivers/',
+      ],
+      false,
+      true
+    ),
+  ],
 ]);

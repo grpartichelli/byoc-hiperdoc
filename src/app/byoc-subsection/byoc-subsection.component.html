@@ -1,5 +1,5 @@
 <div class="subsection" id="subsection">
- <h1  class="subsection__title"> {{subsectionNumber}}. {{subsection.name}}: {{section}}</h1>
+ <h1  class="subsection__title"> <span [hidden]="true" class="guided-experience__subsection">{{subsectionNumber}}.</span> {{subsection.name}}: {{section}}</h1>
 
 
   <div class="subsection__paragraph"*ngFor="let paragraph of subsection.paragraphs">
@@ -21,9 +21,9 @@
 
 
 </div>
-<div class="subsection__navigation">
-  <mat-icon (click)="goToPreviousSubsection()"[class.subsection__navigation__icon__disabled]="subsection.isFirstSection" [inline]="true" class="subsection__navigation__icon">chevron_left</mat-icon>
+<div  class="subsection__navigation">
+  <mat-icon  (click)="goToPreviousSubsection()"[class.subsection__navigation__icon__disabled]="subsection.isFirstSection" [inline]="true" class="subsection__navigation__icon">chevron_left</mat-icon>
   <mat-icon (click)="goToHome()" [inline]="true" class="subsection__navigation__icon subsection__navigation__icon__home">home</mat-icon>
-  <mat-icon (click)="goToNextSubsection()" [class.subsection__navigation__icon__disabled]="subsection.isLastSection" [inline]="true" class="subsection__navigation__icon"[inline]="true" class="subsection__navigation__icon">chevron_right</mat-icon>
+  <mat-icon  (click)="goToNextSubsection()" [class.subsection__navigation__icon__disabled]="subsection.isLastSection" [inline]="true" class="subsection__navigation__icon"[inline]="true" class="subsection__navigation__icon">chevron_right</mat-icon>
 </div>
 

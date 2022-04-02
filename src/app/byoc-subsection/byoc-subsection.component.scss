@@ -1,3 +1,7 @@
+.guided-experience__subsection {
+  color: rgb(255, 64, 129, 1);
+}
+
 .subsection {
   padding: 24px 10% 48px 5%;
 
@@ -17,6 +21,7 @@
       display: block;
       margin: 24px auto 24px auto;
       max-height: 450px;
+      max-width: 450px;
     }
   }
 
@@ -37,7 +42,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 95%;
+    top: 93%;
 
     right: 40%;
     @media (max-width: 1700px) {
@@ -52,11 +57,11 @@
     }
 
     &__icon {
-      font-size: 36px;
+      font-size: 40px;
       cursor: pointer;
       color: rgb(255, 64, 129, 1);
       &__home {
-        font-size: 32px;
+        font-size: 36px;
       }
       &__disabled {
         cursor: default;
