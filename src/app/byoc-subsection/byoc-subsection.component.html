@@ -11,7 +11,7 @@
   <div class="subsection__footer">
     <h2>Recommended Videos</h2>
     <iframe *ngFor="let video of subsection.videos" title="video"  width="600" height="400" [src]="video | safe"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h2>References</h2>
+    <h2>Sources</h2>
     <ul>
       <li *ngFor="let reference of subsection.references"><a [href]="reference">{{reference}}</a></li>
     </ul>

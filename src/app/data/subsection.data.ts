@@ -146,9 +146,113 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       ]
     ),
   ],
-  ['1,5', new SubsectionModel('Cooler', [], [], [], [])],
-  ['1,6', new SubsectionModel('HD and SSD', [], [], [], [])],
-  ['1,7', new SubsectionModel('PSU', [], [], [], [])],
+  [
+    '1,5',
+    new SubsectionModel(
+      'Cooler',
+      [
+        new ParagraphModel(
+          'Air Coolers',
+          'Air coolers are ideal for general PC users. They are inexpensive, and aftermarket air coolers can be used as replacements for stock air coolers. The cooling units actively dissipate hot air using specially designed heat fins. These fins keep temperatures in the PC case low.\n' +
+            '\n' +
+            'Air coolers can be an ideal solution for miniature custom computers and desktops that require additional cooling beyond stock model coolers.' +
+            'Air coolers are not small. A typical aftermarket air cooler is quite large, in comparison to water cooling options. This means that these radiators may not fit comfortably in every PC case. Plus, if you’re building a gaming PC or another system that will frequently run at hotter temperatures, an air cooler might not be enough for your needs.\n' +
+            '\n' +
+            'Also, most aftermarket air cooling fans run at high RPMs, making fan noise much louder than both stock air units and water-based coolers.',
+          'https://www.kabum.com.br/conteudo/descricao/214516/img/TOPo.png'
+        ),
+        new ParagraphModel(
+          'AIO Cooler',
+          'As with air coolers, there’s a wide selection of available options, but most fall into two categories: All-in-One (AIO) coolers, or custom cooling loops. We’ll mostly be focusing on All-in-One (AIO) coolers here, though the fundamental principles of how the liquid cools the CPU are the same in both.\n' +
+            'Similar to air cooling, the process starts with a baseplate that is connected to the IHS of the CPU with a layer of thermal paste. This allows for better heat transfer between the two surfaces. The metal surface of the baseplate is part of the waterblock, which is designed to be filled with coolant.\n' +
+            'The coolant absorbs heat from the baseplate as it moves through the waterblock. It then continues to move through the system and upward through one of two tubes to a radiator. The radiator exposes the liquid to air, which helps it cool, and fans attached to the radiator then move the heat away from the cooler. The coolant then re-enters the waterblock, and the cycle begins again.\n',
+          'https://www.asus.com/us/site/all-in-one-liquid-cooling/websites/img/series/ROG-Strix.png'
+        ),
+        new ParagraphModel(
+          'Water Cooling System',
+          'Water cooling systems consist of a water block, pump, radiator, pipes and, optionally, a reservoir. The pump pushes the liquid through the system. The pumped liquid flows through the water block -- which is attached to the CPU or GPU -- where the heat is transferred from the component to the liquid.',
+          'https://cwsmgmt.corsair.com/landing/hydro-x/img/hydro-x-home/hero-product-white.png'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/Vex9_84VpYs'],
+      [
+        'https://www.newegg.com/insider/how-to-choose-the-right-cpu-cooler-pc-radiator-for-you/',
+        'https://www.intel.com/content/www/us/en/gaming/resources/cpu-cooler-liquid-cooling-vs-air-cooling.html',
+        'https://www.techtarget.com/searchdatacenter/definition/water-cooling#:~:text=Water%20cooling%20systems%20consist%20of,the%20component%20to%20the%20liquid.',
+      ]
+    ),
+  ],
+  [
+    '1,6',
+    new SubsectionModel(
+      'HD and SSD',
+      [
+        new ParagraphModel(
+          'Hard Drive',
+          'A hard disk drive (HDD) is composed of a platter that contains compartments to hold data. This data is your operating system, applications, and any files you have created. There is also an accuator arm that moves across the platter to read or write the information requested. To make this process faster, the platter spins as the accuator arm moves across it.\n' +
+            '\n' +
+            'The compartments that hold the data can be spread out all over the hard disk. That is, data is not written sequentially. There is an indexing system to allow the accuator arm to find all of the pertinent data.\n' +
+            '\n' +
+            'The platter and the accuator arm are delicate, so they are covered by a steel case. This prevents damage to the disk under normal circumstances.',
+          'https://cdn.shopify.com/s/files/1/0571/0954/5110/products/f221c74baa9d092bccc2cbfd340df6884e04c4c1c188dece444d011db14da76c_800x.png?v=1648358898'
+        ),
+        new ParagraphModel(
+          'Solid State Drive',
+          'A solid-state drive (SSD) is a solid-state storage device that uses integrated circuit assemblies to store data persistently, typically using flash memory, and functioning as secondary storage in the hierarchy of computer storage. It is also sometimes called a semiconductor storage device, a solid-state device or a solid-state disk,[1] even though SSDs lack the physical spinning disks and movable read–write heads used in hard disk drives (HDDs) and floppy disks.[2]\n' +
+            '\n' +
+            'Compared with electromechanical drives, SSDs are typically more resistant to physical shock, run silently, and have higher IOPS and lower latency.[3] SSDs store data in semiconductor cells.',
+          'https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/ssd-plus-sata-iii-ssd/gallery/ssd-plus-sata-iii-ssd-left.png.thumb.1280.1280.png'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/YQEjGKYXjw8'],
+      [
+        'https://www.crucial.com/articles/pc-builders/what-is-a-hard-drive',
+        'https://en.wikipedia.org/wiki/Solid-state_drive',
+      ]
+    ),
+  ],
+  [
+    '1,7',
+    new SubsectionModel(
+      'PSU',
+      [
+        new ParagraphModel(
+          'The Power Supply',
+          'A power supply is a component that supplies power to at least one electric load. Typically, it converts one type of electrical power to another, but it may also convert a a different form of energy – such as solar, mechanical, or chemical - into electrical energy.\n' +
+            '\n' +
+            'A power supply provides components with electric power. The term usually pertains to devices integrated within the component being powered. For example, computer power supplies convert AC current to DC current and are generally located at the rear of the computer case, along with at least one fan.\n' +
+            '\n' +
+            'A power supply is also known as a power supply unit, power brick or power adapter.\n' +
+            '\n',
+          'https://www.corsair.com/medias/sys_master/images/images/h0c/h5b/9011430490142/-CP-9020178-WW-Gallery-RM650x-PSU-01.png'
+        ),
+        new ParagraphModel(
+          'Choosing a PSU',
+          'First, always buy a power supply from a reputable manufacturer, and look for reviews of it before you buy. Avoid cheap, generic power supplies, which tend to be substandard. Look for reputable brands that offer solid warranties and support. Corsair, Seasonic, EVGA, and Antec are manufacturers with reputations for producing high-quality power supplies, though even they may offer a few duds among all the studs. Do your homework!\n' +
+            '\n' +
+            'Larger, heavier units are preferable to puny, lightweight models. Higher-quality power supplies almost always use bigger and better capacitors, chokes, and other internal components, and they come outfitted with larger heatsinks for superior heat dissipation—all of which translates into more weight. Larger cooling fans, which typically move more air while making less noise than smaller fans, are another plus.\n' +
+            '\n' +
+            'Silverstone\n' +
+            'A 6+2 pin connector.\n' +
+            'Of course, you should also check the PSU’s connectors to confirm the unit is compatible with your particular system. The term 20+4 pin refers to a connector that can function as either a 20-pin connector or a 24-pin connector. In the 6+2 pin connector shown at right, you can snap two of the pins in the connector on or off to suit your needs.\n' +
+            '\n' +
+            'The vast majority of consumer PCs use standard ATX power supplies. Smaller units and units specially designed for enterprise and server applications are also available; but for common desktop systems, ATX power supplies are it.\n' +
+            '\n' +
+            'When searching for a power supply, keep your eyes on three crucial features: power output, rails, and efficiency. Other specifications and features are important, too, but these three directly affect the PSU’s performance.',
+          'https://10scopes.com/wp-content/uploads/2020/08/what-is-my-power-supply-wattage.jpg'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/lqThn3C-zg4'],
+      [
+        'https://www.techopedia.com/definition/1756/power-supply',
+        'https://www.pcworld.com/article/456490/how-to-pick-the-best-pc-power-supply.html#:~:text=Many%20modern%20gaming%20systems%20with,if%20you%20plan%20on%20overclocking.',
+        'https://10scopes.com/what-power-supply-do-i-have/',
+      ]
+    ),
+  ],
   ['1,8', new SubsectionModel('Graphics Card', [], [], [], [])],
   ['1,9', new SubsectionModel('Peripherals', [], [], [], [])],
   ['1,10', new SubsectionModel('Monitor', [], [], [], [], true)],
