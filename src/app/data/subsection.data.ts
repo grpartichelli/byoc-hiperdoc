@@ -591,8 +591,93 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       ['https://www.rockpapershotgun.com/how-to-install-a-psu']
     ),
   ],
-  ['3,6', new SubsectionModel('HD and SSD', [], [], [], [])],
-  ['3,7', new SubsectionModel('Graphics Card', [], [], [], [], true)],
+  [
+    '3,6',
+    new SubsectionModel(
+      'HD and SSD',
+      [
+        new ParagraphModel(
+          'Installing Hard Drive',
+          'Physically mounting the hard drive in a PC is probably the most difficult part of the installation process.\n' +
+            '\n' +
+            'Securing the drive to a cage usually requires four screws on the sides or bottom of the drive. Many cases—especially enthusiast cases—use tool-less trays that hold the drives with simple pins and clips.\n' +
+            '\n' +
+            'Some cases come with tool-less brackets that make mounting hard drives really easy. However, these brackets are often less secure than traditional screws.\n' +
+            '\n' +
+            'Using screws is the more robust mounting method, but tool-less trays are fine for systems that won’t be moved around much.\n' +
+            '\n' +
+            'This hard drive is flipped upside-down to show its parts. Seven of the 10 screw holes are circled in red, while SATA power and data connections are circled in blue and green, respectively.\n' +
+            '\n' +
+            'Drives last longer when they stay nice and cool. When mounting drives in a system, try to leave as much space between them as possible to maximize airflow over the tops and bottoms. Positioning the drives directly in front of an intake fan also helps.' +
+            '\nOnce the drive is mounted, connecting it to your system is quick and easy.\n' +
+            '\n' +
+            'Virtually all new desktop hard drives sold today use the SATA interface (unless you’re dealing with servers). SATA uses simple cables that are keyed to fit on the drive and motherboard connector one way.\n' +
+            '\n' +
+            'Connect one end of the SATA cable to the drive, and the other end to an available SATA port on your motherboard, and you’re halfway there.',
+          'https://getprostorage.com/wp-content/uploads/2016/05/installingaharddrive.jpg'
+        ),
+        new ParagraphModel(
+          'Installing Solid State Drive',
+          'The bigger but generally more affordable breed of SSD needs three things: a power cable, a SATA cable, and somewhere to sit inside your PC. Cable management will be easier if the drive is already in place, so start by locating one of your PC’s 2.5in mounts. Large 3.5in drive bays usually have mounting holes for fitting a 2.5in drive as well, or there might be dedicated 2.5in mounts attached to the case’s interior chassis. Some cheaper cases also have mounting holes drilled directly into the chassis.\n' +
+            '\n' +
+            'A 2.5in storage drive mounting bracket, removed from the PC case it was installed in.\n' +
+            'A removable mounting bracket like this one makes installation easier.\n' +
+            'It’s a little easier, however, if you have removeable mounts available, as these will let you do the fiddly screwdriver work mostly outside of the case. That’s right, you’ll need a crosshead screwdriver to both remove the mount and affix it to the SSD, before re-installing both to the case.\n' +
+            '\n' +
+            'First, locate the screws – these are very small, and will have come with the case. If you’ve misplaced yours, it’s easy enough to buy replacement screws online, as all SSDs have the same size holes. Place the drive in the mount with the holes aligned, then securely fasten the screws. Replace the mount, if it’s a removable one.\n' +
+            '\n' +
+            'A small screw being inserted into a 2.5in SSD mount, so that it and the drive can be fastened together.\n' +
+            'Some mounting brackets secure the SSD from the underside, others from the edges.\n' +
+            'With the SSD in position, you can now attach the power and data cables; these come included with your PSU and motherboard respectively. They also both use distinctive L-shaped connectors, with the power cable being the wider of the two. Plug this into the SSD, and do the same with the SATA cable, which connects right next to it. Plug the other end of the SATA cable into a spare SATA port on your motherboard, which are normally found near the bottom-right corner.\n' +
+            '\n',
+          'https://images.idgesg.net/images/article/2021/02/install-sata-ssd-in-pc-data-and-power-cables-100878676-large.jpg?auto=webp&quality=85,70'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/vXpAsf7SJ3M'],
+      [
+        'https://www.pcworld.com/article/535852/how-to-install-a-new-hard-drive-in-your-desktop-pc.html',
+        'https://www.crucial.com/articles/about-ssd/how-to-install-solid-state-drive',
+      ]
+    ),
+  ],
+  [
+    '3,7',
+    new SubsectionModel(
+      'Graphics Card',
+      [
+        new ParagraphModel(
+          'Installation of GPU',
+          'Installing a graphics card is a straightforward process that requires three things: a new graphics card, your computer, and a Phillips-head screw driver. Be sure to turn off your PC and unplug it from the wall before you begin.\n' +
+            '\n' +
+            'motherboard pcie lanesBrad Chacos/IDG\n' +
+            'You install a graphics card into a PCI-E x16 slot on your computer’s motherboard (the long, black slots in this picture.)\n' +
+            '\n' +
+            'Unless you need to remove an existing GPU, you first need to locate the long PCI-E x16 slot closest to the heat sink of your processor. This will either be the first or second expansion slot on your motherboard.\n' +
+            '\n' +
+            'Make sure that there are no loose wires blocking your access to this slot. If you’re replacing an existing graphics card, unplug any cables connected to it, remove the screw from its retention bracket on the rear interior of your PC case, and then remove the card. Most motherboards also have a small plastic latch on the end of the PCI-E slot that locks the graphics card in place. Make sure you toggle this latch to unlock your old graphics card so you can remove it.\n' +
+            '\n' +
+            'gpu install 4 of 7Thomas Ryan\n' +
+            'Don’t forget to lock the latch at the end of the PCI-E slot after firmly inserting your graphics card!\n' +
+            '\n' +
+            'You can now install your new graphics card into the open and unobstructed PCI-E x16 slot. Firmly insert the card into the slot, then push down the plastic lock on the end of the PCI-E slot to hold it in place. Next, use a screw to secure the graphic card’s metal retention bracket to your PC’s case. You can reuse the same screw(s) that held the cover bracket or your former graphics card in place.\n' +
+            '\n' +
+            'gpu install 7 of 7Thomas Ryan\n' +
+            'She needs more power, Captain! Your graphics card won’t run unless you’ve connected it to your PSU.\n' +
+            '\n' +
+            'Most gaming-level graphics cards require additional power connectors. If yours does, make sure you connect those PCI-E power cables. Your graphics card will not function correctly without properly supplied power. In fact, if you don’t connect those PCI-E power cables your PC may be unable to boot.\n' +
+            '\n',
+          'https://www.pcworld.com/wp-content/uploads/2021/09/dsc01148-100863588-orig.jpg?quality=50&strip=all&w=1024'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/nyDxrTHDjXQ'],
+      [
+        'https://www.pcworld.com/article/427082/how-to-install-a-graphics-card.html',
+      ],
+      true
+    ),
+  ],
 
   [
     '4,1',
