@@ -22,7 +22,7 @@
   &__footer {
     iframe {
       display: block;
-      margin: auto;
+      margin: 24px auto 24px auto;
     }
 
     li {
@@ -35,6 +35,21 @@
     width: 200px;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 95%;
+
+    right: 40%;
+    @media (max-width: 1700px) {
+      right: 35%;
+    }
+
+    @media (max-width: 1400px) {
+      right: 30%;
+    }
+    @media (max-width: 1000px) {
+      right: 25%;
+    }
+
     &__icon {
       font-size: 36px;
       cursor: pointer;

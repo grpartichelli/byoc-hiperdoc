@@ -2,9 +2,12 @@
 
 <mat-drawer-container class="content" >
   <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen">
+
     <mat-nav-list style="padding: 0">
-    <mat-divider ></mat-divider>
-    <a  mat-list-item class="guided-experience-list-item"><mat-icon style="margin-right: 10px">tour</mat-icon> Guided Experience</a>
+      <mat-divider ></mat-divider>
+      <a  mat-list-item class="guided-experience-list-item"><mat-icon style="margin-right: 10px">tour</mat-icon> Guided Experience</a>
+      <mat-divider ></mat-divider>
+      <a  mat-list-item routerLink="/"><mat-icon style="margin-right: 10px">home</mat-icon> Home</a>
     </mat-nav-list>
 
     <mat-nav-list *ngFor="let section of SECTION_DATA | keyvalue" style="padding: 0">

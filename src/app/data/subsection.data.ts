@@ -253,24 +253,87 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       ]
     ),
   ],
-  ['1,8', new SubsectionModel('Graphics Card', [], [], [], [])],
-  ['1,9', new SubsectionModel('Peripherals', [], [], [], [])],
-  ['1,10', new SubsectionModel('Monitor', [], [], [], [], true)],
+  [
+    '1,8',
+    new SubsectionModel(
+      'Graphics Card',
+      [
+        new ParagraphModel(
+          'The Graphics Card',
+          "A graphics card looks like a smaller version of the computer motherboard — it's a printed circuit board that has a processor, RAM, and other components. A graphics card is sometimes commonly referred to as a graphics processing unit, or GPU, but in reality the GPU is just a component (albeit the primary, defining component) of the graphics card.\n" +
+            '\n' +
+            'In fact, GPUs come in two major forms:\n' +
+            '\n' +
+            "An integrated GPU is built into the motherboard and cannot be upgraded or replaced. You'll find this in laptops and inexpensive desktop PCs. These graphics typically have modest performance and don't perform well for tasks like games or professional graphics production.  \n" +
+            "A discrete GPU is mounted on a graphics card that slips into a computer's expansion slot on the motherboard. This kind of graphics card is replaceable so it can be upgraded as newer graphics cards are developed and helps keep a PC from becoming obsolete. ",
+          'https://www.nvidia.com/content/dam/en-zz/Solutions/shop/1532541-gf-web-dmo-graphics-cards-3090-594x308.png'
+        ),
+        new ParagraphModel(
+          'AMD and NVIDIA',
+          'There are hundreds of graphics cards from dozens of manufacturers, but only two companies actually make the GPUs that power these components: Nvidia and AMD—although Intel\'s Xe Graphics could arrive this year. With its latest "Big Navi" RX 6000 cards, AMD is more competitive than it has been in years with Nvidia and its current-gen Ampere cards, like the GeForce RTX 3080, in general performance.\n' +
+            '\n' +
+            'That said, the realistically lit elephant in the room that we\'ve been ignoring thus-far is real-time ray tracing. Introduced as a major new feature with Nvidia\'s now previous-generation RTX 20-series cards, "Team Green" is now on its second generation RTX with 30-series GPUs. AMD ("Team Red") stepped into this game in a big way in 2020 with its RX 6000 cards, but it\'s still on its first go-round with real-time ray tracing, and so lags behind Nvidia on this front.',
+          'https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-05-06-10-01/GPU_Power_Ladder__9_game_average_frame_rates__1440p__vs_RTX_2080_Ti.gif'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/3p_AdODjL_w'],
+      [
+        'https://www.businessinsider.com/what-is-a-graphics-card',
+        'https://www.tomshardware.com/reviews/gpu-buying-guide,5844.html',
+      ]
+    ),
+  ],
+  [
+    '1,9',
+    new SubsectionModel(
+      'Peripherals',
+      [
+        new ParagraphModel(
+          'What are Peripherals',
+          "A peripheral device is an internal or external device that connects directly to a computer or other digital device but does not contribute to the computer's primary function, such as computing. It helps end users access and use the functionalities of a computer.\n" +
+            '\n' +
+            'Since it’s not a core device for the system, the computer can still function without the peripheral, which simply provides extra functions. However, some peripherals such as a mouse, keyboard, or monitor tend to be pretty much fundamental to the interaction between the user and the computer itself.\n' +
+            '\n' +
+            'A peripheral device is also called a peripheral, computer peripheral, input-output device, or I/O device.\n' +
+            '\n'
+        ),
+        new ParagraphModel(
+          'Choosing a Keyboard',
+          'We work with keyboards more intimately and often than we do just about any other piece of computer hardware. And keyboards have different kinds of key mechanisms, called switches, that determine how typing on a keyboard feels to the user. That means that typing on different keyboards can be very different experiences.\n' +
+            '\n' +
+            'Specifically, keyboards have different tactile attributes – things like key travel, bottoming actions, responsiveness, and the amount of force required to register a key press – that all add up to distinct, subjective experiences. A keyboard that feels good to one person might feel terrible to another.\n' +
+            '\n' +
+            'There are many kinds of keyboard switches, but silicone dome, scissor, and mechanical switches are the most common. Each has its strengths and weaknesses, and we’ll cover each of them briefly. Note that there can be great variation between keyboards made using the same mechanisms, and so getting hands-on experience with a keyboard before purchasing can be helpful.',
+          'https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k120/gallery/k120-gallery-01-new.png'
+        ),
+
+        new ParagraphModel(
+          'Choosing a Mouse',
+          'While you’re considering whether to go wired or wireless, you’ll want to consider exactly how you want to use your mouse. As we mentioned above, if you’re going to be using your mouse for gaming, then you’ll want to include performance in your list of important specifications.\n' +
+            '\n' +
+            'Latency is one important performance consideration for gaming, where you’ll want the least latency possible. Also known as “input lag,” latency can be a killer, literally, in today’s fast-paced first-person shooter games. You don’t want to find yourself falling behind your competition, and latency can do just that, making you the tiniest bit slower on the trigger.\n' +
+            '\n' +
+            'Sensitivity is also an important mouse specification, and manufacturers define it as dots per inch (DPI). The higher the DPI, the less physical distance the mouse needs to move on a surface to register movement on-screen. For gamers, sensitivity can be particularly important. Some prefer high sensitivity that allows them to move quickly across a screen with smaller hand motions, while others prefer to move their hands in larger gestures without such a large on-screen impact.',
+          'https://resource.logitechg.com/w_1000,c_limit,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/products/gaming/gaming-mice/g305-lightspeed-wireless-gaming-mouse/g304-g305-lightspeed-wireless-gaming-mouse21.png?v=1'
+        ),
+      ],
+      [],
+      [
+        'https://www.youtube.com/embed/9S-U5f140-U',
+        'https://www.youtube.com/embed/ar-HKYkWlvw',
+      ],
+      [
+        'https://www.techopedia.com/definition/2252/peripheral-device',
+        'https://www.newegg.com/insider/how-to-choose-a-keyboard/',
+        'https://www.newegg.com/insider/how-to-choose-a-mouse/',
+      ]
+    ),
+  ],
 
   [
     '2,1',
-    new SubsectionModel(
-      'Prices',
-      [],
-      [],
-      [],
-      [],
-      false,
-      false,
-      false,
-      true,
-      10
-    ),
+    new SubsectionModel('Prices', [], [], [], [], false, false, false, true, 9),
   ],
   ['2,2', new SubsectionModel('Stores', [], [], [], [])],
   ['2,3', new SubsectionModel('Tips', [], [], [], [], true)],
