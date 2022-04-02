@@ -39,8 +39,10 @@
     &__icon {
       font-size: 36px;
       cursor: pointer;
+      color: rgb(255, 64, 129, 1);
       &__home {
         font-size: 32px;
+        color: black;
       }
       &__disabled {
         cursor: default;
