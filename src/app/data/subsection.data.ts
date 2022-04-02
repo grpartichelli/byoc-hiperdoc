@@ -485,13 +485,114 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       3
     ),
   ],
-  ['3,2', new SubsectionModel('CPU', [], [], [], [])],
-  ['3,3', new SubsectionModel('RAM', [], [], [], [])],
-  ['3,4', new SubsectionModel('Memory', [], [], [], [])],
-  ['3,5', new SubsectionModel('Cooler', [], [], [], [])],
-  ['3,6', new SubsectionModel('PSU', [], [], [], [])],
-  ['3,7', new SubsectionModel('HD and SSD', [], [], [], [])],
-  ['3,8', new SubsectionModel('Graphics Card', [], [], [], [], true)],
+  [
+    '3,2',
+    new SubsectionModel(
+      'CPU',
+      [
+        new ParagraphModel(
+          'Line Up the CPU',
+          'Your CPU has to go into its socket on the motherboard facing the right direction. Fortunately, there are almost always indicators on the CPU and socket to help you get the alignment correct.\n' +
+            '\n' +
+            "Look for a matching indicator on the corner of your CPU and the socket. It will likely appear as a small triangle. If you don't see any indicator, you should consult the manuals for your motherboard and CPU. ",
+          'https://finalprojecte.readthedocs.io/en/latest/_images/CPUpicture.png'
+        ),
+        new ParagraphModel(
+          'Install the CPU',
+          "Assuming you correctly lined up your CPU with the socket, it should drop right into place. You may need to gently, and we mean gently, shift it around if it feels like it's not quite in place. AMD CPU pins, for instance, can be a little trickier to line up with the holes in the socket.\n With your CPU properly seated in the socket, you should be able to push down the retention arm with ease (if it's an Intel CPU, lower the bracket first). If it feels like the retention arm is resisting you, double-check the seating of the CPU in the socket. We find a gentle push with your pinky finger can be enough force to close the retention arm, so don't try to force it or you may end up damaging your CPU (We've bent CPU pins that way, and it is NOT fun trying to bend them back). "
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/_zojIW-2DD8'],
+      ['https://www.techradar.com/how-to/how-to-install-a-cpu']
+    ),
+  ],
+  [
+    '3,3',
+    new SubsectionModel(
+      'Memory',
+      [
+        new ParagraphModel(
+          'Installing RAM',
+
+          "Once you know where your RAM needs to go, you're ready to start installing. Each RAM slot will have two small clips at either side. Press these down to open them. They don't need to move very far, so don't use too much force." +
+            'RAM sticks are keyed, which means they have a gap in the connector that will ensure you can only insert them one way. Line up your RAM so that the gap on the connector corresponds with the RAM slot. ' +
+            "With your RAM lined up, gently press it down into the slot. When the RAM stick is fully depressed, the locking tabs at each side should click back into place. Once they have, you're all set.\n" +
+            '\n',
+          'https://guide-images.cdn.ifixit.com/igi/guM3moQdMOGNRuCL.medium'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/VA-eGIitpsw'],
+      ['https://www.techradar.com/how-to/how-to-install-ram']
+    ),
+  ],
+  [
+    '3,4',
+    new SubsectionModel(
+      'Cooler',
+      [
+        new ParagraphModel(
+          'Apply Thermal Paste',
+          "our CPU cooler doesn't go straight onto your CPU. There should be a thin layer of a thermal compound that eliminates any gaps between the CPU lid and the base of your CPU cooler. Some coolers come with a thermal paste already applied, so check the bottom of your coolr or the manual to see if it has pre-applied thermal paste. \n" +
+            '\n' +
+            "If your cooler has pre-applied thermal paste, you're ready to go. DO NOT apply a second layer of thermal paste.\n" +
+            '\n' +
+            "If your cooler doesn't already have thermal paste on it, apply thermal paste to the top of your CPU lid. You should only apply a small amount, though there are many schools of thought on how you should apply it. You can simply put a small dot, no bigger than a pea, in the center of your CPU lid. ",
+          'https://cpuninja.com/wp-content/uploads/2021/07/How-To-Apply-Thermal-Paste-To-A-CPU.jpg'
+        ),
+        new ParagraphModel(
+          'Install Cooler',
+          "Take your cooler and hold it over the CPU, carefully lining up the screws (or whatever type of connector it uses) with the holes in your motherboard or the standoffs you installed earlier. Lower the cooler onto the CPU. (Note: You may need to remove fans from your cooler while attaching your cooler, though it's not necessary for all coolers.) \nWith the CPU cooler in place, screw in (or push in) the connectors using an X pattern. Tighten loosely first, then increase tension with each pass without putting to much muscle into it. Do not go around the CPU in a square, as this can create uneven pressure across the processor and may impact cooling.\n" +
+            '\nIf you removed any fans from your cooler earlier or still have some to install, you can attach them to your cooler now. How they connect will depend on the fans and your cooler, so consult your manual.\n' +
+            '\n' +
+            "If you're using a water cooler, you'll need to connect the radiator, any coolant reservoirs, and the water pump to one another.",
+          'https://www.xda-developers.com/files/2021/12/How-to-install-a-CPU-cooler-2-1024x683.jpg'
+        ),
+      ],
+      [],
+      [
+        'https://www.youtube.com/embed/aqEHnt32K98',
+        'https://www.youtube.com/embed/9Ky1PlSe9KU',
+      ],
+      [
+        'https://www.techradar.com/how-to/how-to-install-a-cpu-cooler-keeping-your-processor-chill',
+      ]
+    ),
+  ],
+  [
+    '3,5',
+    new SubsectionModel(
+      'PSU',
+      [
+        new ParagraphModel(
+          'Installing Into Case',
+          'Start off by making sure all the cables you need are attached to the PSU, especially if you have a modular or semi-modular unit. The essentials are the 24-pin motherboard power connector, one 8-pin CPU power connector, and as many GPU/PCIe connectors as your graphics card needs. You may also need one or more SATA power cables, for internal storage or to power certain CPU coolers.\n' +
+            '\n' +
+            'A  modular PC PSU, out of its case, with several cables connected to it.\n' +
+            'This is a modular PSU, with fully removable cables.\n' +
+            'With the PSU fan facing downwards, slide it into the case’s PSU bay. This is usually at the back and in the floor of the case, except for very cheap or old cases that have it at the top.',
+          'https://www.corsair.com/corsairmedia/sys_master/productcontent/blog_how-to-build-a-pc-psu-fans-and-cable-routing-Content-2.png'
+        ),
+        new ParagraphModel(
+          'Connecting Cables',
+          'It’s cable connectin’ time. There’s no particular order, but trying to avoid criss-crossing the cables will help you organise them later. Be sure to make use of any routing holes around the motherboard tray, too.\n' +
+            '\n' +
+            'The big 24-pin cable connects directly to the motherboard – it’s hard to miss that one, but should almost always be on the board’s right edge – while the 8-pin CPU power cable plugs in at the top-left of the mobo. Some higher-end motherboards might have a secondary CPU power connector, but this is only really for extreme overclocking use, and your system will work fine if you only connect the primary connector. That said, graphics cards with multiple PSU connectors will always need all of them filled.\n' +
+            '\n' +
+            'A close-up of the CPU power connectors on the edge of a motherboard.\n' +
+            "In this case (hahhhh) we're only connecting the main, 8-pin CPU power connector on the right.\n" +
+            'Remember the SATA power connectors as well (the ones shaped like a stretched-out ‘L’). These can plug directly into hard drives or SATA SSDs; some CPU coolers will also have SATA power connector, either as part of a hub unit or on a separate cable.',
+          'https://ae01.alicdn.com/kf/H13b583e1ee0b4a5a99c5ff2df7f71929f/Formulamod-asus-seasonic-antec-totalmente-modular-kit-de-cabo-psu-18awg-mangas-compridas-fm-bzxz-por.jpg'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/-Z77LpU3oUg'],
+      ['https://www.rockpapershotgun.com/how-to-install-a-psu']
+    ),
+  ],
+  ['3,6', new SubsectionModel('HD and SSD', [], [], [], [])],
+  ['3,7', new SubsectionModel('Graphics Card', [], [], [], [], true)],
 
   [
     '4,1',
@@ -518,7 +619,7 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
       false,
       false,
       true,
-      8
+      7
     ),
   ],
   [
