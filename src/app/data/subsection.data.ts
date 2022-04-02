@@ -333,10 +333,109 @@ export const SubsectionData: Map<string, SubsectionModel> = new Map([
 
   [
     '2,1',
-    new SubsectionModel('Prices', [], [], [], [], false, false, false, true, 9),
+    new SubsectionModel(
+      'Prices',
+      [
+        new ParagraphModel(
+          'Current Price Changes',
+          "Costs are on the rise for several types of PC components, including memory chips and LCD screens. While that's a concern for procurement managers at PC makers such as Dell Inc. and Hewlett-Packard Co., users should have little to fear, analysts said.\n" +
+            '\n' +
+            'Prices for PCs remain on their traditional downward spiral, and little is going to change that, said Bryan Ma, a computer industry analyst at market research company IDC in Singapore.\n' +
+            '\n' +
+            'The average price of a desktop PC fell to $847 in the first quarter of 2005, from $1,022 in 2002, according to IDC. For notebooks, the average price dropped to $1,340 from $1,644. The figures include all types of PCs, from high-end systems for gamers to low-end PCs aimed at emerging markets.',
+          'https://www.techspot.com/images2/news/bigimage/2021/08/2021-08-30-image.png'
+        ),
+        new ParagraphModel(
+          'Recommendation: Prices With PC PartPicker',
+          'PCPartPicker Price Trends are daily generated graphs showing historical price information for several product types. Thousands of components are grouped into logical categories and combined with price data. The data is analyzed and presented as an intensity graph of price distributions with minimum, maximum, and average price trends.\n' +
+            '\n' +
+            'With price trend graphs, you can easily keep track of price patterns.'
+        ),
+      ],
+      [],
+      [
+        'https://www.youtube.com/embed/75L8Hrb49A4',
+        'https://www.youtube.com/embed/ubb0PChInMM',
+      ],
+      [
+        'https://pcpartpicker.com/trends/',
+        'https://www.computerworld.com/article/2557703/component-costs-rising--but-pc-prices-won-t.html',
+      ],
+      false,
+      false,
+      false,
+      true,
+      9
+    ),
   ],
-  ['2,2', new SubsectionModel('Stores', [], [], [], [])],
-  ['2,3', new SubsectionModel('Tips', [], [], [], [], true)],
+  [
+    '2,2',
+    new SubsectionModel(
+      'Stores',
+      [
+        new ParagraphModel(
+          'Places To Buy: USA',
+          'NewEgg.com\n' +
+            'Micro Center\n' +
+            'TigerDirect.com\n' +
+            'Crucial.com\n' +
+            'Frys.com\n' +
+            'Amazon and eBay'
+        ),
+        new ParagraphModel(
+          'Places To Buy: Brasil',
+          'Kabum.com\n' + 'Pichau.com\n' + 'Terabyteshop.com\n'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/IAu4Y28arVU'],
+      [
+        'https://www.online-tech-tips.com/gadgets/the-best-websites-for-buying-computer-parts-online/',
+      ]
+    ),
+  ],
+  [
+    '2,3',
+    new SubsectionModel(
+      'Tips',
+      [
+        new ParagraphModel(
+          'Tips List from SupaZT r/buildapc',
+          "Plan ahead so there aren't future headaches. Make sure the parts will fit and that you have all the necessary cables.\n" +
+            "There's no such thing as 'future proofing'... I think a better phrase would be \"future resistant\". The order I would build a future resistant computer is this: PSU, Case, Storage. Everything else gets outdated fast.\n" +
+            "Microcenter is your best friend (especially for CPU's). Keep in mind Bestbuy or Staples might be able to pricematch Microcenter's prices. If you don't live by a microcenter there's Amazon, Newegg, and PCPartpicker.\n" +
+            "You probably won't need a 1000W PSU, $300 mobo, or even SLI.\n" +
+            "Don't cheap out on PSU's. It can be the most important part in a build. [Corsair, Seasonic, EVGA, XFX are notable brands.]\n" +
+            "Don't buy a PSU with a 220/110V switch. It means it won't have Power Factor Correction too! If you do have one make sure it's set to 110V if you're in the USA.\n" +
+            "Buying a case too large for their needs. These days you can fit 6 HDD's into ITX cases. It depends on your needs though.\n" +
+            'Installing too many fans. A few large fans can move as much air as speedy, loud small ones.\n' +
+            'Slowly collecting parts. What if one of the parts that is sitting there idly is defective and the 30-day return / replacement is now obsolete?\n' +
+            "Don't buy a $500 single graphic card or run two cards in SLI and then only plan to use it on one small resolution monitor\n" +
+            "Don't buy a triple channel ram kit and pair it with a dual channel motherboard.\n" +
+            "An i7 is only necessary if you're utitlizing programs that can take advantage of it's features. (Hyper-Threading, Multi-Cores, etc). If you're only gaming with no intention of utilizing those programs stick with the i5.\n" +
+            'Make sure the RAM/Motherboard (pins) are compatible as well as the CPU/Motherboard (socket). This information is usually found online or in the manual.\n' +
+            'Does your PSU have a 4 pin 12v connector for your CPU? Or 8 pin?\n' +
+            'Do not trust power supply calculators from manufacturer websites!\n' +
+            "If you're not going to play games or perform video/CUDA programming, on-board video is fine. The card will just create extra noise you don't want even when it's idle because it still generates heat that will cause other fans to spin faster.\n" +
+            "You don't need a 'k' series CPU, a Z Chipset, or an aftermarket cooler/heatsink(although this could make it quieter) if you're NOT overclocking. Alternatively you could use a Xeon if not overclocking.\n" +
+            'Buying an Optical Drive is usually not needed anymore. Everything can be done with a flash drive these days. Another option: External dvd drive.\n' +
+            "I personally suggest getting a SSD. They're amazing. Minimum 120GB. If not, get a 1TB HDD and grab an SSD later.\n" +
+            'Most people are perfectly fine with on-board audio these days. A DAC/AMP would serve you better than a soundcard anyways.\n' +
+            'Verify if your CPU heatsink needs a mount underneath the motherboard.\n' +
+            'Verify if your video card requires two separate power cables or not and that you have the correct cables coming from your PSU.\n' +
+            'If you have a case with front usb 3 ports make sure your motherboard has a usb 3.0 on-board header\n' +
+            'If you use an ssd or plan to add one, make sure your morherboard has a 6gbps sata port',
+          'https://shopinfo.vteximg.com.br/arquivos/ids/1277374-1000-1000/1.png?v=637720121597100000'
+        ),
+      ],
+      [],
+      ['https://www.youtube.com/embed/j_DcWgxMZ3k'],
+      [
+        'https://www.reddit.com/r/buildapc/comments/1yg8xg/dos_donts_and_tips_for_first_time_bulders/',
+      ],
+      true
+    ),
+  ],
 
   [
     '3,1',
