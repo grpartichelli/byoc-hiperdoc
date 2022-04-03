@@ -19,6 +19,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { SafePipe } from './pipes/safe.pipe';
 import { FormsModule } from '@angular/forms';
+import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     ByocHomeComponent,
     ByocSubsectionComponent,
     SafePipe,
+    ByocGuidedDialogComponent,
   ],
   imports: [
     BrowserModule,
