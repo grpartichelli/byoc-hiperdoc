@@ -21,7 +21,7 @@
 
 
 </div>
-<div  class="subsection__navigation">
+<div *ngIf="isGuidedActive" class="subsection__navigation">
   <mat-icon  (click)="goToPreviousSubsection()"[class.subsection__navigation__icon__disabled]="subsection.isFirstSection" [inline]="true" class="subsection__navigation__icon">chevron_left</mat-icon>
   <mat-icon (click)="goToHome()" [inline]="true" class="subsection__navigation__icon subsection__navigation__icon__home">home</mat-icon>
   <mat-icon  (click)="goToNextSubsection()" [class.subsection__navigation__icon__disabled]="subsection.isLastSection" [inline]="true" class="subsection__navigation__icon"[inline]="true" class="subsection__navigation__icon">chevron_right</mat-icon>

@@ -1,11 +1,11 @@
 <byoc-toolbar (isSidebarOpenEvent)="setIsSidebarOpen($event)"></byoc-toolbar>
 
 <mat-drawer-container class="content" >
-  <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen">
+  <mat-drawer class="sidebar" mode="side" [opened]="isSidebarOpen && !isGuidedActive">
 
     <mat-nav-list style="padding: 0">
       <mat-divider ></mat-divider>
-      <a  mat-list-item class="guided-experience-list-item"><mat-icon style="margin-right: 10px">tour</mat-icon> Guided Experience</a>
+      <a  (click)="activateGuided()" mat-list-item class="guided-experience-list-item"><mat-icon style="margin-right: 10px">tour</mat-icon> Guided Experience</a>
       <mat-divider ></mat-divider>
       <a  mat-list-item routerLink="/"><mat-icon style="margin-right: 10px">home</mat-icon> Home</a>
     </mat-nav-list>
@@ -19,6 +19,6 @@
   <router-outlet ></router-outlet>
 </mat-drawer-container>
 
-<button class="guided-experience-float-button" mat-fab color="accent" >
+<button *ngIf="!isGuidedActive" (click)="activateGuided()" class="guided-experience-float-button" mat-fab color="accent" >
   <mat-icon class="guided-experience-float-button__icon">tour</mat-icon>
 </button>

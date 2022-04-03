@@ -1,8 +1,19 @@
-<mat-toolbar color="primary" style="height: 7%">
-  <button mat-icon-button class="example-icon" (click)="toggleSidebar()">
+<mat-toolbar [class.guided]="isGuidedActive"color="primary" style="height: 7%">
+  <button *ngIf="!isGuidedActive" mat-icon-button class="example-icon" (click)="toggleSidebar()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span [routerLink]="'/home'" style="cursor: pointer"> Build Your Own Computer</span>
+  <span *ngIf="!isGuidedActive" [routerLink]="'/home'" style="cursor: pointer"> Build Your Own Computer</span>
+
+  <button *ngIf="isGuidedActive" mat-icon-button class="example-icon" >
+    <mat-icon>tour</mat-icon>
+  </button>
+  <span *ngIf="isGuidedActive" >
+ Guided Experience Mode Activated</span>
+
+
+  <button [routerLink]="'/home'" (click)="deactivateGuided()" style="margin-left: 16px; font-size: 16px" *ngIf="isGuidedActive" mat-flat-button color="primary">Deactivate</button>
+
+
   <span class="example-spacer"></span>
 
 

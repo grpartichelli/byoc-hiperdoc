@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 import { SubsectionModel } from '../model/subsection.model';
+import { GuidedService } from '../service/guided.service';
 
 @Component({
   selector: 'app-byoc-subsection',
@@ -21,11 +22,16 @@ export class ByocSubsectionComponent implements OnInit {
   constructor(
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
-    private readonly dataService: DataService
+    private readonly dataService: DataService,
+    private readonly guidedService: GuidedService
   ) {}
 
   ngOnInit() {
     this.loadSubsection();
+  }
+
+  public get isGuidedActive() {
+    return this.guidedService.isActive;
   }
 
   public goToPreviousSubsection() {
