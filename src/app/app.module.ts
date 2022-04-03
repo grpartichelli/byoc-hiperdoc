@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { SafePipe } from './pipes/safe.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SafePipe } from './pipes/safe.pipe';
     MatSidenavModule,
     MatDividerModule,
     MatListModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
