@@ -10,14 +10,21 @@ import { NavigationService } from '../service/navigation.service';
 })
 export class ByocGuidedDialogComponent {
   public selectedSection = 1;
+  public askQuestion = false;
   public SECTION_DATA = SectionData;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     readonly navigationService: NavigationService
-  ) {}
+  ) {
+    this.askQuestion = data.askQuestion;
+  }
 
   start() {
     this.navigationService.goToSubsection(`${this.selectedSection},1`);
+  }
+
+  startDialog() {
+    this.askQuestion = false;
   }
 }

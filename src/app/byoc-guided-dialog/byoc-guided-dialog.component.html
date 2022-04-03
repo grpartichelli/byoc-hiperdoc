@@ -1,4 +1,4 @@
-<div *ngIf="!data.isFinished">
+<div *ngIf="!data.isFinished && !askQuestion">
 <h1 class="guided-dialog-title" mat-dialog-title >Welcome to The Guided Experience Mode</h1>
 
 <mat-dialog-content class="mat-typography guided-dialog-content">
@@ -32,6 +32,21 @@
   <mat-dialog-content class="mat-typography guided-dialog-content">
 
     <p style="margin-bottom: 16px;">We hope you have been able to build your own computer!</p>
-    <button [routerLink]="['/home']" style="font-size: 16px; margin: auto; display: block;" mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Return to Home</button>
+    <button [routerLink]="['/home']" style="font-size: 16px; margin: auto; display: block;" mat-raised-button color="primary" [mat-dialog-close]="true" >Return to Home</button>
   </mat-dialog-content>
 </div>
+
+
+<div *ngIf="!data.isFinished && askQuestion">
+  <mat-dialog-content class="mat-typography guided-dialog-content">
+  <h1 class="guided-dialog-title" mat-dialog-title > Would like to try the Guided Experience Mode?</h1>
+  <p style="margin-bottom: 16px;">The Guided Experience Mode is a personalized, step-by-step best way to best utilize our website.</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button style="font-size: 16px" mat-button mat-dialog-close >NO</button>
+    <button style="font-size: 16px"  mat-raised-button color="accent" (click)="startDialog()">YES </button>
+  </mat-dialog-actions>
+</div>
+
+
+
