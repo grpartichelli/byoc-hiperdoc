@@ -44,16 +44,20 @@
     position: fixed;
     top: 93%;
 
-    right: 40%;
+    right: 35%;
     @media (max-width: 1700px) {
-      right: 35%;
+      right: 30%;
     }
 
     @media (max-width: 1400px) {
-      right: 30%;
+      right: 25%;
     }
     @media (max-width: 1000px) {
-      right: 25%;
+      right: 20%;
+    }
+
+    &__guided {
+      right: 47% !important;
     }
 
     &__icon {
@@ -62,6 +66,10 @@
       color: rgb(255, 64, 129, 1);
       &__home {
         font-size: 36px;
+        color: rgb(63, 81, 181, 1);
+      }
+      &__tour {
+        cursor: default;
       }
       &__disabled {
         cursor: default;
