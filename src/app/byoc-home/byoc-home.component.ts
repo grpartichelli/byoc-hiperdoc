@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubsectionData } from '../data/subsection.data';
+import { GuidedService } from '../service/guided.service';
 
 @Component({
   selector: 'app-byoc-home',
@@ -9,5 +10,9 @@ import { SubsectionData } from '../data/subsection.data';
 export class ByocHomeComponent implements OnInit {
   readonly SUBSECTION_DATA = SubsectionData;
 
-  ngOnInit() {}
+  constructor(private guidedService: GuidedService) {}
+
+  ngOnInit() {
+    this.guidedService.deactivate();
+  }
 }

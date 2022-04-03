@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ByocGuidedDialogComponent } from '../byoc-guided-dialog/byoc-guided-dialog.component';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { NavigationService } from './navigation.service';
 
 @Injectable({
@@ -28,11 +28,16 @@ export class GuidedService {
   public openGuidedDialog() {
     const dialogRef = this.matDialog.open(ByocGuidedDialogComponent, {
       autoFocus: false,
+      data: {
+        isFinished: false,
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.navigationService.goToSubsection('1,1');
+      } else {
+        this.deactivate();
       }
     });
   }

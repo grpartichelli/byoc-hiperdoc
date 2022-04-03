@@ -29,6 +29,6 @@
 <div  *ngIf="isGuidedActive"  class="subsection__navigation subsection__navigation__guided">
   <mat-icon (click)="goToPreviousSubsection()"[class.subsection__navigation__icon__disabled]="subsection.isFirstSection" [inline]="true" class="subsection__navigation__icon">chevron_left</mat-icon>
   <mat-icon  [inline]="true" class="subsection__navigation__icon subsection__navigation__icon subsection__navigation__icon subsection__navigation__tour">tour</mat-icon>
-  <mat-icon  (click)="goToNextSubsection()" [class.subsection__navigation__icon__disabled]="subsection.isLastSection" [inline]="true" class="subsection__navigation__icon"[inline]="true" class="subsection__navigation__icon">chevron_right</mat-icon>
+  <mat-icon  (click)="goToNextSubsection()"  [inline]="true" class="subsection__navigation__icon"[inline]="true" class="subsection__navigation__icon">chevron_right</mat-icon>
 </div>
 

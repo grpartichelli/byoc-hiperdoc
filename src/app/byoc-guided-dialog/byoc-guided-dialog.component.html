@@ -1,8 +1,9 @@
+<div *ngIf="!data.isFinished">
 <h1 class="guided-dialog-title" mat-dialog-title >Welcome to The Guided Experience Mode</h1>
 
 <mat-dialog-content class="mat-typography guided-dialog-content">
   <h3 style="font-weight: bold">Step By Step</h3>
-  <p>When the guided experience mode is active, you gain access to the following routing helper:</p>
+  <p>When the guided experience mode is active, you gain access to the following helper:</p>
   <img src="../../assets/images/router.png" alt="router">
   <p>It's purpose is to guide you through all the steps of building your own computer in best possible order.</p>
 
@@ -14,4 +15,14 @@
   <button style="font-size: 16px" mat-button mat-dialog-close>CANCEL</button>
   <button style="font-size: 16px" mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>START </button>
 </mat-dialog-actions>
+</div>
 
+
+<div *ngIf="data.isFinished">
+  <h1 class="guided-dialog-title" mat-dialog-title > You Completed the Guided Experience! Congratulations!</h1>
+  <mat-dialog-content class="mat-typography guided-dialog-content">
+
+    <p style="margin-bottom: 16px">We hope you have been able to build your own computer!</p>
+    <button [routerLink]="['/home']" style="font-size: 16px; margin: auto; display: block;" mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Return to Home</button>
+  </mat-dialog-content>
+</div>

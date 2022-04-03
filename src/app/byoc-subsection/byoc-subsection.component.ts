@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../service/data.service';
 import { SubsectionModel } from '../model/subsection.model';
 import { GuidedService } from '../service/guided.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ByocGuidedDialogComponent } from '../byoc-guided-dialog/byoc-guided-dialog.component';
 
 @Component({
   selector: 'app-byoc-subsection',
@@ -23,7 +25,8 @@ export class ByocSubsectionComponent implements OnInit {
     private readonly activatedRoute: ActivatedRoute,
     private readonly router: Router,
     private readonly dataService: DataService,
-    private readonly guidedService: GuidedService
+    private readonly guidedService: GuidedService,
+    private readonly matDialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -65,6 +68,9 @@ export class ByocSubsectionComponent implements OnInit {
 
   public goToNextSubsection() {
     if (this.subsection.isLastSection) {
+      this.matDialog.open(ByocGuidedDialogComponent, {
+        data: { isFinished: true },
+      });
       return;
     }
 
