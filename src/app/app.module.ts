@@ -21,6 +21,7 @@ import { SafePipe } from './pipes/safe.pipe';
 import { FormsModule } from '@angular/forms';
 import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     FormsModule,
     MatDialogModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

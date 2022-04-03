@@ -34,9 +34,7 @@ export class GuidedService {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        this.navigationService.goToSubsection('1,1');
-      } else {
+      if (!result) {
         this.deactivate();
       }
     });

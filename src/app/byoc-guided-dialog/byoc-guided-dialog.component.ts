@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { SectionData } from '../data/section.data';
+import { NavigationService } from '../service/navigation.service';
 
 @Component({
   selector: 'byoc-guided-dialog-component',
@@ -7,5 +9,15 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['byoc-guided-dialog.component.scss'],
 })
 export class ByocGuidedDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+  public selectedSection = 1;
+  public SECTION_DATA = SectionData;
+
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    readonly navigationService: NavigationService
+  ) {}
+
+  start() {
+    this.navigationService.goToSubsection(`${this.selectedSection},1`);
+  }
 }
