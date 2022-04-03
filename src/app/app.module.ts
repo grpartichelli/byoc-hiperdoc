@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { SafePipe } from './pipes/safe.pipe';
 import { FormsModule } from '@angular/forms';
 import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dial
     ByocToolbarComponent,
     ByocSearchBarComponent,
     ByocHomeComponent,
+    ByocGuidedDialogComponent,
     ByocSubsectionComponent,
     SafePipe,
-    ByocGuidedDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +46,7 @@ import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dial
     MatDividerModule,
     MatListModule,
     FormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

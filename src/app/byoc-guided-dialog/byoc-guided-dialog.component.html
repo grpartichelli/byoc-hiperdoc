@@ -1,1 +1,17 @@
-<p>byoc-guided-dialog works!</p>
+<h1 class="guided-dialog-title" mat-dialog-title >Welcome to The Guided Experience Mode</h1>
+
+<mat-dialog-content class="mat-typography guided-dialog-content">
+  <h3 style="font-weight: bold">Step By Step</h3>
+  <p>When the guided experience mode is active, you gain access to the following routing helper:</p>
+  <img src="../../assets/images/router.png" alt="router">
+  <p>It's purpose is to guide you through all the steps of building your own computer in best possible order.</p>
+
+  <h3 style="font-weight: bold">Personalization</h3>
+  <p>During the guided experience, you might be asked questions that will help us define the best route  <br> for you to build your computer, giving you the best personalized experience.</p>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button style="font-size: 16px" mat-button mat-dialog-close>CANCEL</button>
+  <button style="font-size: 16px" mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>START </button>
+</mat-dialog-actions>
+
