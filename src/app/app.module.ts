@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { ByocGuidedDialogComponent } from './byoc-guided-dialog/byoc-guided-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
+import { ByocVideoComponent } from './byoc-video/byoc-video.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatRadioModule } from '@angular/material/radio';
     ByocGuidedDialogComponent,
     ByocSubsectionComponent,
     SafePipe,
+    ByocVideoComponent,
   ],
   imports: [
     BrowserModule,
