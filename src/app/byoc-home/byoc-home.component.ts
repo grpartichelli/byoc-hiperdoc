@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SubsectionData } from '../data/subsection.data';
 import { GuidedService } from '../service/guided.service';
 import { timeout } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ByocVideoComponent } from '../byoc-video/byoc-video.component';
 
 @Component({
   selector: 'app-byoc-home',
@@ -12,9 +14,13 @@ export class ByocHomeComponent implements OnInit, OnDestroy {
   readonly SUBSECTION_DATA = SubsectionData;
   public showGuided = true;
 
-  constructor(private guidedService: GuidedService) {}
+  constructor(
+    private guidedService: GuidedService,
+    private matDialog: MatDialog
+  ) {}
 
   ngOnInit() {
+    this.matDialog.open(ByocVideoComponent);
     this.guidedService.deactivate();
     setTimeout(() => {
       if (
