@@ -12,7 +12,14 @@
 
     <mat-nav-list *ngFor="let section of SECTION_DATA | keyvalue" style="padding: 0">
       <mat-divider ></mat-divider>
-      <a mat-list-item routerLink="/section/{{section.key}}/subsection/1">{{section.key}}. {{section.value}}</a>
+      <a  (click)="toggleSection(section.key)" mat-list-item>{{section.key}}. {{section.value}} <mat-icon *ngIf="sectionIsActive.get(section.key)" style="margin-left: auto; color: white">expand_less</mat-icon> <mat-icon *ngIf="!sectionIsActive.get(section.key)" style="margin-left: auto; color: white">expand_more</mat-icon></a>
+      <mat-divider ></mat-divider>
+      <div
+           *ngFor="let subsection of getSubsections(section.key)">
+        <a  mat-list-item (click)="goToSubsection(subsection.key || '')">•&nbsp;&nbsp;{{subsection.name}} </a>
+        <mat-divider ></mat-divider>
+      </div>
+
     </mat-nav-list>
     <mat-divider ></mat-divider>
   </mat-drawer>

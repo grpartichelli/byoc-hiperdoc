@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { SectionData } from './data/section.data';
 import { NavigationEnd, Router } from '@angular/router';
 import { GuidedService } from './service/guided.service';
+import { SubsectionData } from './data/subsection.data';
+import { SubsectionModel } from './model/subsection.model';
+import { NavigationService } from './service/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +14,13 @@ import { GuidedService } from './service/guided.service';
 export class AppComponent {
   isSidebarOpen = true;
   SECTION_DATA = SectionData;
+  SUBSECTION_DATA = SubsectionData;
+  sectionIsActive: Map<number, boolean> = new Map<number, boolean>();
 
   constructor(
     private router: Router,
-    private readonly guidedService: GuidedService
+    private readonly guidedService: GuidedService,
+    private readonly navigationService: NavigationService
   ) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -26,6 +32,28 @@ export class AppComponent {
     });
   }
 
+  public goToSubsection(subsection: string) {
+    this.navigationService.goToSubsection(subsection);
+  }
+
+  public toggleSection(section: number) {
+    this.sectionIsActive.set(section, !this.sectionIsActive.get(section));
+  }
+
+  public getSubsections(section: number): Array<SubsectionModel> {
+    const subsections: Array<SubsectionModel> = [];
+
+    if (this.sectionIsActive.get(section)) {
+      SubsectionData.forEach((subsection, key) => {
+        if (key.startsWith(section.toString())) {
+          subsection.key = key;
+          subsections.push(subsection);
+        }
+      });
+    }
+
+    return subsections;
+  }
   public get isGuidedActive() {
     return this.guidedService.isActive;
   }

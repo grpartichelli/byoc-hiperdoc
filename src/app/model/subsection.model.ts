@@ -11,6 +11,7 @@ export class SubsectionModel {
   isFirstSection: boolean = false;
   isFirstSubsection: boolean = false;
   previousSubsection: number = 1;
+  key?: string;
 
   constructor(
     name: string,
