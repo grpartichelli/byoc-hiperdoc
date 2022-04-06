@@ -39,7 +39,7 @@ export class ByocHomeComponent implements OnInit, OnDestroy {
       ) {
         this.guidedService.activate(true);
       }
-    }, 15000);
+    }, 45000);
   }
 
   ngOnDestroy() {
